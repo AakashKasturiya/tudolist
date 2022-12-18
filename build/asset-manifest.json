@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/tudolist/static/css/main.e4d37cbf.css",
+    "main.js": "/tudolist/static/js/main.58b7dafa.js",
+    "index.html": "/tudolist/index.html",
+    "main.e4d37cbf.css.map": "/tudolist/static/css/main.e4d37cbf.css.map",
+    "main.58b7dafa.js.map": "/tudolist/static/js/main.58b7dafa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e4d37cbf.css",
+    "static/js/main.58b7dafa.js"
+  ]
+}
