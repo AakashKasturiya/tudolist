@@ -23,13 +23,14 @@ let Main = () => {
         const [text, setText] = React.useState("");
         const [list, setList] = React.useState([]);
         const [show, setShow] = React.useState(false);
-
+ const [compelted,setCompelted] = React.useState(true);
         /**Add Item */
         const AddItem = () => {
             if(!text){
              alert("Add the tasks first!!")
             }
            else{
+                     setCompelted(true);
             setShow(true);
             setText("");
             setList([...list, text]);
@@ -44,6 +45,10 @@ let Main = () => {
                 return id !== index;
             })
             setList(updateItem);
+                    if (updateItem.length === 0) {
+                setShow(false);
+                setCompelted(false);
+            }
         }
 
 
@@ -100,7 +105,7 @@ let Main = () => {
                 <ListGroup.Item >
 
                     {show? <h6>Today's Tasks</h6>:null}
-                  
+                      {compelted? null:<h6 className='success'>Tasks compelted!!</h6>}
                     {
                     list.map((item, index) => {
                         return ( 
